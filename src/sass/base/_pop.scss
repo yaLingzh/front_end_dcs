@@ -1,0 +1,18 @@
+//pop 弹层 style
+.rcg-box{
+  margin:40px;
+  min-height:140px;
+}
+.rcrtText{
+  line-height: 25px;
+  @include containerWidth(300px, 0);
+  @extend %fontSize14;
+  @include textAlign;
+  img{
+    margin:0 5px 0 0;
+  }
+}
+.box_foot{
+  @extend %pop-buttons;
+}
+

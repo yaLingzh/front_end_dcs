@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.el-tabs--card{
+	.el-tabs__header{
+		background:#cfd6e0;
+		color:#4583c0;
+		.el-tabs__nav{
+			border:none;
+		}
+	}
+}
+.el-tabs__item{
+	@include height(true, 2.8rem, 2.8rem);
+	margin-top:0.8rem;
+	font-size:1.6rem;
+	color:#4583c0;
+	&.is-active{
+		background:#fff;
+		color:#303133;
+	}
+}

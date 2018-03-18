@@ -31,6 +31,10 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  externals: {
+    'echarts': 'echarts',
+    'lodash': '_'
+  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -40,6 +44,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.sass$/,
+        loaders: ['style', 'css', 'scss','sass']
+      },
       // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,

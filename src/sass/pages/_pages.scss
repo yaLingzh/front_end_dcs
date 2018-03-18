@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.grid-bg-purple-dark {
+  background: #a4c4dd;
+}
+.grid-bg-purple {
+  background: #e6e6e6;
+}
+.grid-bg-purple-light {
+  background: #f7f7f7;
+}
+.grid-content {
+  min-height: 3.6rem;
+}
+.left-menu-tree-title{
+	@include height(true, 3.5rem, 3.5rem);
+	@extend %relative;
+	padding:0 1rem;
+	color:#fff;
+	font-size:1.6rem;
+	background:#7fabd8;
+	em{
+		@extend %absolute;
+		right:-0.5rem;
+		top:1rem;
+		width:3rem;
+		height:3rem;
+		color:#fff;
+	}
+}
+.left-menu-tree-tool{
+	padding: 10px;
+	em{
+		color:#fff;
+		font-size:1.8rem;
+		margin-right:1rem;
+	}
+}
+.el-input-group{
+	width:73%;
+}
+
+.grid-middle-title{
+	@extend .left-menu-tree-title;
+	background:#cfd6e0;
+	color:#4583c0;
+	.icon-ele-close{
+		color:#4583c0
+	}
+}
+.grid-left-content{
+	min-height:150px;
+}
+.grid-middle-content{
+	min-height:200px;
+	max-height:508px;
+}

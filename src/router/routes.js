@@ -1,20 +1,19 @@
 
 import PageMain from '@/components/index/PageMain'
-import HelloWorld from '@/components/HelloWorld'
+import HelloWorld from '@/components/PageMain'
 export default [
   {
     path: '/',
     meta: {
       title: '首页',
     },
-    component: PageMain//require('../components/index/PageMain.vue'),
+    component: resolve => require(['../components/PageMain.vue'], resolve),
+    children:[
+            { path: '/info', 
+              component: resolve => require(['../components/index/PageMain.vue'], resolve) 
+            }
+    ]
   },
-  {
-    path: 'HelloWorld',
-    meta: {
-      title: '首页',
-    },
-    component: HelloWorld,
-  },
+
 
 ]
