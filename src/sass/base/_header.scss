@@ -30,7 +30,7 @@
     @extent %textAlign;
     color:#fff;
     font-size:1.5rem;
-    &:hover, &.header-nav-first-current{
+    &:hover, &.navFirstCurrent{
       background:#fff;
       color:#346492;
       cursor:default;
@@ -59,9 +59,10 @@
   }
   dd{
     @extend %display;
-    padding:0 1.4rem;
+    padding:0.5rem 1.4rem 0;
+    border-radius:5px;
     @extend %textAlign;
-    &:hover,&.header-nav-child-current{
+    &:hover,&.navChildCurrent{
       background:#4294f7;
       color:#fff;
       em,p{

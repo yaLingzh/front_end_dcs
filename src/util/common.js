@@ -18,8 +18,6 @@ export function appInitInject(store, router) {
   Vue.prototype.$_ = _
   Vue.prototype.$$ = window.jQuery || window.$
 
-
-
   axios.defaults.headers.post['Content-Type'] = 'application/json'
   
   Vue.mixin({

@@ -4,11 +4,12 @@ html, body {
   font-style: normal;
   line-height: 100%;
   font-family: $baseFontFamily;
+  
 }
 
 body {
-  width: calc(100vw - 17px);
-  overflow-x: auto;
+  // width: calc(100vw - 17px);
+  // overflow:hidden;
 }
 
 html, body {
@@ -93,13 +94,14 @@ h1, h2, h3, h4, h4, h6 {
   font-style: normal;
   line-height: 100%;
 }
+
 @font-face {
   font-family: 'iconfont';  /* project id 595299 */
-  src: url('//at.alicdn.com/t/font_595299_k7hrd0sqgehr529.eot');
-  src: url('//at.alicdn.com/t/font_595299_k7hrd0sqgehr529.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_595299_k7hrd0sqgehr529.woff') format('woff'),
-  url('//at.alicdn.com/t/font_595299_k7hrd0sqgehr529.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_595299_k7hrd0sqgehr529.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_595299_cebn1h4gupiudi.eot');
+  src: url('//at.alicdn.com/t/font_595299_cebn1h4gupiudi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_595299_cebn1h4gupiudi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_595299_cebn1h4gupiudi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_595299_cebn1h4gupiudi.svg#iconfont') format('svg');
 }
 
 .iconfont {

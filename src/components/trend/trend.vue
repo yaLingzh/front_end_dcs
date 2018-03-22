@@ -1,9 +1,10 @@
 <template>
  <div>
-    <div class="trend-content" ref="trend-echart-data"><!-- 趋势图表数据展示--></div>
+    <div class="trend-content" style="width:100%;height: 400px;" ref="trendData"><!-- 趋势图表数据展示--></div>
  </div>
 </template>
 <script>
+	import echarts from "echarts"
 	export default{
 		name:'trend',
 		data(){
@@ -14,17 +15,17 @@
 		methods:{
 			getTrendEchartData(){
 				let vm = this;
-				let trendChartsOne = echarts.init(vm.$refs.trend-echart-data);
+				let trendChartsOne = echarts.init(vm.$refs.trendData);
 				let chartsOption = {
 					    title: {
-					        text: '折线图堆叠'
+					        text: '趋势图'
 					    },
 					    tooltip: {
 					        trigger: 'axis'
 					    },
-					    legend: {
-					        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-					    },
+					    // legend: {
+					    //     data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+					    // },
 					    grid: {
 					        left: '3%',
 					        right: '4%',
@@ -33,7 +34,22 @@
 					    },
 					    toolbox: {
 					        feature: {
-					            saveAsImage: {}
+					            saveAsImage: {},
+					            dataView: { //数据视图
+			                        show: true
+			                    },
+			                    restore: { //重置
+			                        show: true
+			                    },
+			                    dataZoom: { //数据缩放视图
+			                        show: true
+			                    },
+			                    saveAsImage: {//保存图片
+			                        show: true
+			                    },
+			                    magicType: {//动态类型切换
+			                        type: ['bar', 'line']
+			                    }
 					        }
 					    },
 					    xAxis: {
@@ -78,7 +94,15 @@
 					    ]
 				};
 				trendChartsOne.setOption(chartsOption);
+
 			},
 		},
+		mounted(){
+			let vm = this
+			vm.getTrendEchartData()
+		},
+		created(){
+			
+		}
 	}
 </script>

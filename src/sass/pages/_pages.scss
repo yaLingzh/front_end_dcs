@@ -10,7 +10,15 @@
 }
 .grid-content {
   min-height: 3.6rem;
+  // 分列等高实现
+  padding-bottom:2000px;
+  margin-bottom:-2000px;
 }
+.body-content{
+	overflow: hidden;
+}
+
+
 .left-menu-tree-title{
 	@include height(true, 3.5rem, 3.5rem);
 	@extend %relative;
@@ -48,9 +56,27 @@
 	}
 }
 .grid-left-content{
-	min-height:150px;
+	min-height:15rem;
 }
 .grid-middle-content{
-	min-height:200px;
-	max-height:508px;
+	min-height:20rem;
+	max-height:50.8rem;
+}
+
+.test-record-content{
+	.el-form {
+		padding:1rem 0 1rem 1.5rem;
+		@extend %textAlign;
+		.el-form-item{
+			float: left;
+		}
+	}
+}
+
+.tool-button-content{
+	padding:1.5rem 0;
+	text-align: center;
+	button{
+		margin-right:3.5rem;
+	}
 }
