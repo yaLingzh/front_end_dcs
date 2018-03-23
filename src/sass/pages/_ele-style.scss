@@ -20,6 +20,18 @@
 }
 .el-table {
 	th{
-		text-align:center;
+		// text-align:center;
+		background:#eee;
+	}
+}
+.el-dialog__header{
+	background:#18d6ba;
+	.el-dialog__title{
+		color:#fff;
+	}
+	.el-dialog__headerbtn {
+		.el-dialog__close{
+			color:#fff;
+		}
 	}
 }

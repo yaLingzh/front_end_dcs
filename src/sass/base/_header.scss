@@ -13,10 +13,9 @@
 }
 
 .header-top-name{
-  @include height(auto, 3rem, 3rem);
+  @include height(auto, 3.4rem, 3.4rem);
   @extend %textAlign;
   color:#fff;
-  height:4rem
 }
 .header-nav-first{
   padding-top:2px;
@@ -62,6 +61,7 @@
     padding:0.5rem 1.4rem 0;
     border-radius:5px;
     @extend %textAlign;
+    a{display: block;}
     &:hover,&.navChildCurrent{
       background:#4294f7;
       color:#fff;
